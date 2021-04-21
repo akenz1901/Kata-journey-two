@@ -1,7 +1,9 @@
 class time_properties:
-    hour = 0
-    minute = 0
-    second = 0
+
+    def __init__(self, hour, minute, second):
+        self.hour = 0
+        self.minute = 0
+        self.second = 0
 
 
 def time(hour, minute, second):
@@ -16,3 +18,10 @@ def time(hour, minute, second):
 def validate_hour(hour):
     if hour > 0 & hour <= 12:
         time_properties.hour = hour
+
+
+def average(nums):
+    total = sum(nums)
+    size = len(nums)
+    avg = total/size
+    return avg
