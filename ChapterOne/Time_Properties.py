@@ -1,35 +1,40 @@
-class Time_properties:
+class Time_properties(object):
 
-    def __init__(self):
-        self.hour = 0
-        self.minute = 0
-        self.second = 0
-
-    def __validate_hour(self):
-        if self.hour > 0 & self.hour <= 12:
-            raise ValueError("Invalid Input")
-
-    def __validate_minute(self):
-        if self.minute >= 0 & self.minute <= 60:
-            raise ValueError("Invalid Minute Input")
-
-    def __validate_second(self):
-        if self.second >= 0 & self.second <= 60:
-            raise ValueError("Invalid Minute Input")
-
-    def time(self, hour, minute, second):
-        self.__validate_hour()
+    def __init__(self, hour=0, minute=0, second=0):
         self.hour = hour
-        self.__validate_minute()
         self.minute = minute
-        self.__validate_second()
         self.second = second
 
-    def __str__(self):
-        return "{}".format(self.time(40, 50, 70))
+    def __validate_hour(self, hour):
+        if 0 < hour > 12:
+            raise ValueError("Invalid Input")
+        self.hour = hour
 
-    # def average(nums):
-    #     total = sum(nums)
-    #     size = len(nums)
-    #     avg = total / size
-    #     return avg
+    def __validate_minute(self, minute):
+        if 60 < minute > 0:
+            raise ValueError("Invalid Minute Input")
+        self.minute = minute
+
+    def __validate_second(self, second):
+        if 0 < second > 60:
+            raise ValueError("Invalid Minute Input")
+        self.second = second
+
+    def time(self, hour, minute, second):
+        self.__validate_hour(hour)
+        self.__validate_minute(minute)
+        self.__validate_second(second)
+
+    def __str__(self):
+        return f'{self.hour}:{self.minute}:{self.second}'
+
+
+time = Time_properties()
+time.time(0, 60, 0)
+print(time.__str__())
+
+# # def average(nums):
+# #     total = sum(nums)
+# #     size = len(nums)
+# #     avg = total / size
+# #     return avg
