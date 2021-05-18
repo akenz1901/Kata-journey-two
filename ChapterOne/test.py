@@ -7,3 +7,6 @@ class Except(Exception):
         age = 0
         num = num
         return num
+
+    def average(*args):
+        return sum(args) / len(args)

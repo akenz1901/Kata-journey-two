@@ -21,5 +21,6 @@ class EvenNumber:
     def __str__(self):
         return 'EvenNumber({})'.format(self.__rep__())
 
-    def __rep__(self):
+    @staticmethod
+    def __rep__():
         return EvenNumber(2)
