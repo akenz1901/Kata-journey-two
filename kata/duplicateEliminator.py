@@ -3,12 +3,11 @@ def removeDuplicate():
 
     insert = 0
     for i in numbers:
-        if insert <= 5:
+        if insert < 5:
             numbers.append(insert)
             insert += 1
-        elif insert > 5:
             numbers.remove(i)
-            insert += 1
+        numbers.remove(i)
     return numbers
 
 
