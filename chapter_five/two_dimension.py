@@ -11,4 +11,5 @@ for i in firstNum:
     for j in secNum:
         if i == j:
             numbers.append(i)
+            print(i, end=" ")
 print(numbers)
