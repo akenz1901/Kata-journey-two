@@ -1,3 +1,4 @@
+
 def confirm_vowels():
     message = input("Enter a message: ").lower()
     vowel = ['a', 'e', 'i', 'o', 'u']
@@ -5,8 +6,4 @@ def confirm_vowels():
     empty_container = []
     for i in message:
         empty_container.append(i)
-
-    for 
-    return empty_container
-
 
