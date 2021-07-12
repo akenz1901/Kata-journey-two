@@ -18,5 +18,28 @@ for i in range(1, 7):
 
 for i in [12, 4, 5, 9, 23]:
     if i % 2 == 1:
-        break
+        continue
     print(i)
+
+num = int(input("enter number: "))
+while True:
+    three_seq_one(num)
+    response = input("Do you want to perform another task? ").lower()
+    if response != "yes":
+        break
+    else:
+        raise ValueError("Wrong Input")
+
+celeb = [("michael", 1995), ("mercy", 1995), ("Elizabeth", 1999)]
+
+for (name, year) in celeb:
+    print(name, end=", ")
+    print(year, end=".\n")
+
+students = [('amaka', ['com sci', 'economics']),
+            ('shile', ['Software Eng', 'design']),
+            ('nne', ['com sci', 'data science']),
+            ('toheeb', ['com sci', 'economics', 'english']),
+            ('chinedu', ['com sci', 'economics', 'mathematics'])]
+for name, course in students:
+    print(name, "takes", len(course), "course", end=".\n")
