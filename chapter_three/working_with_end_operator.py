@@ -11,10 +11,10 @@ def three_seq_one(number):
 three_seq_one(3)
 
 for i in range(10):
-    print(i, "\t", 2**i)
+    print(i, "\t", 2 ** i)
 
 for i in range(1, 7):
-    print(i+2, end="   ")
+    print(i + 2, end="   ")
 
 for i in [12, 4, 5, 9, 23]:
     if i % 2 == 1:
@@ -43,3 +43,8 @@ students = [('amaka', ['com sci', 'economics']),
             ('chinedu', ['com sci', 'economics', 'mathematics'])]
 for name, course in students:
     print(name, "takes", len(course), "course", end=".\n")
+
+for name, course in students:
+    print(list(enumerate(name)))
+    print(name)
+
