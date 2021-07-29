@@ -55,3 +55,12 @@ def display_string(name, age):
 def display_string_format_with_decimal(name, age, amount=0.0):
     sentence_ = "my name is {0} i am {1} year old i have %{2:f}".format(name, age, amount)
     return sentence_
+
+
+def display_string_using_format_order():
+    names = "michael", "ola", "akenz"
+    print("They both bearing {2} and surname is {0} maybe the other one middle name is {1}".format(names[0], names[2],
+                                                                                                   names[1]))
+
+
+display_string_using_format_order()
