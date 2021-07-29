@@ -61,11 +61,20 @@ def display_string_using_format_order():
     names = "michael", "ola", "akenz"
     print("They both bearing {2} and surname is {0} maybe the other one middle name is {1}".format(names[0], names[2],
                                                                                                    names[1]))
-    outputs = "3**2 = {0}, 2 + 2 = {1} three decimal number = {2:.3f}".format(3**2, 2+2, 3.1414504444)
+    outputs = "3**2 = {0}, 2 + 2 = {1} three decimal number = {2:.3f}".format(3 ** 2, 2 + 2, 3.1414504444)
     print(outputs)
 
     outputs = "||{0:<15}||{1:^15}||{2:>15}||"
     print(outputs.format(names[0], names[1], names[2]))
+
+    outputs = "Using x to format {0} to hexadecimal {0:x}"
+    print(outputs.format(123345))
+
+    outputs = "{0:>4}{1:>6}{2:>6}{3:>8}{4:>13}{5:>24}"
+    print(outputs.format('i', '2**2', '3**2', '5**2', '10**2', '20**2'))
+
+    for i in range(1, 11):
+        print(outputs.format(i, i ** 2, i ** 3, i ** 5, i ** 10, i ** 20))
 
 
 display_string_using_format_order()
