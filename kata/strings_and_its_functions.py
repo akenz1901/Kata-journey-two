@@ -20,16 +20,16 @@ def count_occurrence_of_character(word, char):
     return counter
 
 
-def split(sentence):
-    new_sentence = sentence.split()
+def split(sentence_):
+    new_sentence = sentence_.split()
     return new_sentence
 
 
-def eliminate_punctuation(sentence):
+def eliminate_punctuation(sentence_):
     punctuations = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     new_sentence = ""
 
-    for char in sentence:
+    for char in sentence_:
         if char not in punctuations:
             new_sentence += char
     return new_sentence
@@ -61,6 +61,11 @@ def display_string_using_format_order():
     names = "michael", "ola", "akenz"
     print("They both bearing {2} and surname is {0} maybe the other one middle name is {1}".format(names[0], names[2],
                                                                                                    names[1]))
+    outputs = "3**2 = {0}, 2 + 2 = {1} three decimal number = {2:.3f}".format(3**2, 2+2, 3.1414504444)
+    print(outputs)
+
+    outputs = "||{0:<15}||{1:^15}||{2:>15}||"
+    print(outputs.format(names[0], names[1], names[2]))
 
 
 display_string_using_format_order()
