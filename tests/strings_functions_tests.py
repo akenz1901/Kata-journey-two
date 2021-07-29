@@ -33,4 +33,4 @@ class FindTest(unittest.TestCase):
                            feathers, beaks, and eggshells? The 'extra stuff' gets passed out as ---
                            you guessed it --- snake POOP! """
         self.assertEqual(strings_and_its_functions.eliminate_punctuation(sentence).split(sentence))
-        print(result)
+
