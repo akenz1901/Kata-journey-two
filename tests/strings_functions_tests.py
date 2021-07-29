@@ -34,3 +34,8 @@ class FindTest(unittest.TestCase):
                            you guessed it --- snake POOP! """
         self.assertEqual(strings_and_its_functions.eliminate_punctuation(sentence).split(sentence))
 
+    def test_string_format(self):
+        self.assertEqual(strings_and_its_functions.display_string('michael', 4), "my name is michael i am 4 year old")
+
+    def test_decimal_with_string_format(self):
+        self.assertEqual(strings_and_its_functions.display_string_format_with_decimal("akenz", 21, ), "my name is akenz i am 21 year old i have %0.000000")

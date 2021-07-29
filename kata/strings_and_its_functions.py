@@ -45,3 +45,13 @@ sentence = """Pythons are constrictors, which means that they will 'squeeze' the
                            you guessed it --- snake POOP! """
 result = eliminate_punctuation(sentence).split(sentence)
 print(result)
+
+
+def display_string(name, age):
+    sentence_ = "my name is {0} i am {1} year old".format(name, age)
+    return sentence_
+
+
+def display_string_format_with_decimal(name, age, amount=0.0):
+    sentence_ = "my name is {0} i am {1} year old i have %{2:f}".format(name, age, amount)
+    return sentence_
