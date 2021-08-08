@@ -42,5 +42,3 @@ class FindTest(unittest.TestCase):
                                                                                                       "akenz i am 21 "
                                                                                                       "year old i "
                                                                                                       "have %0.000000")
-
-
