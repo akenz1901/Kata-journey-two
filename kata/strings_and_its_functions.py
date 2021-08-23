@@ -78,7 +78,7 @@ class PythonStrings(object):
         for i in range(1, 11):
             print(outputs.format(i, i ** 2, i ** 3, i ** 5, i ** 10, i ** 20))
 
-    word = 'michael'
+    word = 'nwala joy'
 
     def contains(self, word):
         start = 0
@@ -95,4 +95,4 @@ class PythonStrings(object):
                 return False
 
 
-print(PythonStrings().contains("hael"))
+print(PythonStrings().contains("ala"))
