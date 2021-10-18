@@ -94,5 +94,12 @@ class PythonStrings(object):
             if count == len(self.word):
                 return False
 
+    def return_tuple_or_string(self, variable):
+        if type(variable) == 'str':
+            return f"{variable} is str"
+        else:
+            return f'{variable} tuple'
+
 
 print(PythonStrings().contains("ala"))
+print(PythonStrings().return_tuple_or_string("moderator"))
