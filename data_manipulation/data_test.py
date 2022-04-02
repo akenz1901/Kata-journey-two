@@ -16,8 +16,9 @@ friendship_pairs = [(0, 1), (0, 2), (1, 2), (1, 3), (2, 3), (3, 4),
 
 friendships = {user["id"]: [] for user in users}
 
+# print({user["id"]: [] for user in users})
+
 for i, j in friendship_pairs:
     friendships[i].append(j)
     friendships[j].append(i)
-    print(friendships)
-
+    print(i, j)
