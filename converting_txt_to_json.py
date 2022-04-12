@@ -10,7 +10,7 @@ def get_list_of_numbers(num: int):
 
 
 def get_file_elements():
-    first_txt = open('nsc508s t1_22-1.txt', 'r')
+    first_txt = open('BUS105.txt', 'r')
 
     file_index = [lis.strip() for lis in first_txt]
     first_txt.close()
@@ -22,7 +22,7 @@ def analyze_question_answer():
     option_list = {'question': 'question', 'option1': 'option1', 'option2': 'option2', 'option3': 'option3',
                    'option4': 'option4', 'answer': 'answer'}
     content = get_file_elements()
-    numbers = get_list_of_numbers(11)
+    numbers = get_list_of_numbers(70)
     count = 0
 
     for i in numbers:
@@ -45,4 +45,4 @@ def convert_output_to_json(file_name=''):
 
 
 # print(get_file_elements())
-convert_output_to_json("NSC508")
+convert_output_to_json("BUS105")
